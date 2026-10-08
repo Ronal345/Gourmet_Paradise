@@ -1,0 +1,266 @@
+/* ============================================================
+   ESTILOS GENERALES Y RESET
+   ============================================================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 30px 15px;
+    line-height: 1.5;
+}
+
+.contenedor {
+    max-width: 1150px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* ============================================================
+   CABECERA Y NAVEGACIÓN
+   ============================================================ */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 16px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #0f172a;
+}
+
+.subtitulo {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* ============================================================
+   BOTONES
+   ============================================================ */
+.btn {
+    display: inline-block;
+    padding: 9px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.15s ease;
+}
+
+.btn-primary { background-color: #0284c7; color: #ffffff; }
+.btn-primary:hover { background-color: #0369a1; }
+
+.btn-success { background-color: #16a34a; color: #ffffff; }
+.btn-success:hover { background-color: #15803d; }
+
+.btn-danger { background-color: #dc2626; color: #ffffff; }
+.btn-danger:hover { background-color: #b91c1c; }
+
+.btn-secondary { background-color: #64748b; color: #ffffff; }
+.btn-secondary:hover { background-color: #475569; }
+
+/* ============================================================
+   ALERTAS Y NOTIFICACIONES
+   ============================================================ */
+.alerta {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.alerta-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.alerta-exito {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+/* ============================================================
+   FORMULARIO LOGIN Y ENTRADAS
+   ============================================================ */
+.formulario-login {
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #334155;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #0284c7;
+}
+
+/* ============================================================
+   CATÁLOGO DE PRODUCTOS (GRID Y TARJETAS)
+   ============================================================ */
+.grid-catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card-producto {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 18px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.card-categoria {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0284c7;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-titulo {
+    font-size: 17px;
+    color: #0f172a;
+    margin: 6px 0;
+    font-weight: 600;
+}
+
+.card-presentacion {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.card-notas {
+    font-size: 12px;
+    color: #475569;
+    background: #f8fafc;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border-left: 3px solid #0284c7;
+    margin-bottom: 12px;
+}
+
+.card-precio {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.stock-tag {
+    display: inline-block;
+    font-size: 12px;
+    color: #166534;
+    background: #dcfce7;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* ============================================================
+   TABLAS (CARRITO Y PANEL DE ADMINISTRACIÓN)
+   ============================================================ */
+.tabla-contenedor {
+    overflow-x: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background: #f8fafc;
+    color: #475569;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+.input-inline {
+    width: 80px;
+    padding: 6px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* ============================================================
+   SECCIÓN DE CHECKOUT / RESUMEN
+   ============================================================ */
+.resumen-pago {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 20px;
+    margin-top: 20px;
+}
