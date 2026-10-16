@@ -2,13 +2,12 @@
 // config/db.php
 
 // Parámetros de conexión a la Capa de Datos (MySQL)
-// Si pruebas desde tu máquina local (VS Code), usa la IP pública de la VM de MySQL (52.159.89.131).
-// Si estás dentro de la VM 2 (Apache en Azure), coloca la IP privada interna de la VM de BD.
-$host = '52.159.89.131'; 
+
+$host = 'IP_PUBLICA'; 
 $port = '3306';
 $db   = 'gourmet_paradise';
-$user = 'grupo3';
-$pass = 'Grupo13253##';
+$user = 'USER_NAME';
+$pass = 'PASSWORD';
 
 try {
     $dsn = "mysql:host={$host};port={$port};dbname={$db};charset=utf8mb4";
